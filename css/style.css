@@ -110,7 +110,9 @@ li,
 button,
 form,
 input,
-textarea {
+textarea,
+blockquote,
+figcaption {
   font-weight: 500;
   line-height: 150%;
   color: rgb(64, 66, 66);

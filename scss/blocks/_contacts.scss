@@ -1,0 +1,87 @@
+.contacts {
+    margin-bottom: 120px;
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.contacts-heading {
+    position: relative;
+
+    flex: 0 0 520px;
+
+    padding-bottom: 60px;
+    &::before,
+    &::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+
+        height: 5px;
+        width: 120px;
+
+        background-color: $primaryColor;
+    }
+    &::before {
+        bottom: 12px;
+    }
+    &::after {
+        bottom: 0;
+    }
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 40px 50px;
+
+    flex: 0 0 calc(100% - 520px);
+
+    border: 1px solid $lightGrayColor;
+    &__field {
+        display: block;
+
+        margin-bottom: 16px;
+        padding: 12px 0 20px;
+
+        width: 100%;
+
+        border-bottom: 1px solid black;
+
+        resize: none;
+        &--textarea {
+            height: 88px;
+
+            margin-bottom: 32px;
+            padding: 12px 48px 20px 0;
+
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+                width: 6px;
+
+                border-radius: 6px;
+
+                background-color: $primaryColor;
+            }
+        }
+        &::placeholder {
+            transition: color $animationTime;
+        }
+        &:focus {
+            &::placeholder {
+                color: rgba($textColor, 50%);
+            }
+        }
+    }
+    &__button {
+        margin-left: auto;
+    }
+}
