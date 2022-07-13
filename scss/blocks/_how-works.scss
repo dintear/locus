@@ -1,0 +1,78 @@
+.how-works {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    margin-bottom: 140px;
+
+    background-color: rgb(204, 240, 230);
+}
+
+.how-works-leftside {
+    position: relative;
+
+    width: 100%;
+
+    background-image: url('../img/how-works.png');
+    background-position: center bottom;
+    background-size: cover;
+    &__play {
+        position: absolute;
+
+        right: calc(-108px / 2);
+        top: calc(50% + 12px);
+
+        height: 108px;
+        width: 108px;
+    }
+}
+
+.how-works-description {
+    flex: 0 0 520px;
+
+    padding: 70px 100px 80px 120px;
+    &__text {
+        color: $textColorLight;
+    }
+    &__link {
+        position: relative;
+        margin-top: 32px;
+        padding: 8px 0;
+
+        outline: 0;
+
+        background-color: transparent;
+
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: $textColorLight;
+        text-transform: uppercase;
+
+        cursor: pointer;
+        &::before {
+            content: "";
+
+            transition: left $animationTime,
+                        width $animationTime;
+
+            position: absolute;
+
+            left: 50%;
+            bottom: 0;
+
+            height: 6px;
+            width: 0;
+
+            border-radius: 24px;
+            
+            background-color: $secondaryColor;
+        }
+        &:hover {
+            &::before {
+                left: 20%;
+
+                width: 60%;
+            }
+        }
+    }
+}

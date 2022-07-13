@@ -1,0 +1,27 @@
+.firstscreen {
+    margin-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.fsc-content {
+    &__offer,
+    &__picture {
+        flex: 0 0 48%;
+    }
+}
+
+.fsc-offer {
+    &__description {
+        font-weight: 400;
+        @include adaptiveFontSize(24, 20);
+    }
+    &__button {
+        margin-top: 40px;
+    }
+}

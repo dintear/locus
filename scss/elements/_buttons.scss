@@ -1,0 +1,29 @@
+.btn {
+    display: inline-block;
+
+    padding: 20px 80px;
+
+    font-weight: 500;
+    line-height: 150%;
+    text-decoration: none;
+    @include adaptiveFontSize(18, 16);
+
+    cursor: pointer;
+    &--primary {
+        transition: background-color $animationTime;
+
+        color: rgb(255, 255, 255);
+
+        border-radius: 16px;
+
+        background-color: $primaryColor;
+        &:hover {
+            background-color: darken($primaryColor, 4%)
+        }
+    }
+    &--notstand {
+        border-radius: 20px 20px 20px 0;
+        
+        font-weight: 700;
+    }
+}

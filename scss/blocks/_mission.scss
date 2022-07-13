@@ -1,0 +1,25 @@
+.mission {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    margin-bottom: 70px;
+    &__image {
+        max-width: 580px;
+
+        margin-right: 120px;
+    }
+}
+
+.mission-content {
+    &__title {
+        max-width: 500px;
+    }
+    &__text {
+        max-width: 600px;
+
+        margin-top: 36px;
+
+        @include adaptiveFontSize(24, 20);
+    }
+}

@@ -1,0 +1,60 @@
+// ===== Embedding fonts ===== //
+
+@include embeddingFont('Poppins', 'Poppins-Regular', 400, normal);
+@include embeddingFont('Poppins', 'Poppins-Medium', 500, normal);
+@include embeddingFont('Poppins', 'Poppins-SemiBold', 600, normal);
+@include embeddingFont('Poppins', 'Poppins-Bold', 700, normal);
+@include embeddingFont('Poppins', 'Poppins-ExtraBold', 800, normal);
+
+
+
+// ===== Styles for Headings ===== //
+
+// Heading 1 and 2
+h1, h2 {
+	font-weight: 800;
+	line-height: 150%;
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(64, 48);
+}
+
+// Heading 3
+h3 {
+	font-weight: 700;
+	line-height: 150%;
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(40, 32);
+}
+
+
+
+// ===== Styles for other text elements ===== //
+
+// Parent elements
+p,
+li,
+button,
+form,
+input,
+textarea {
+	font-weight: 500;
+    line-height: 150%;
+	color: $textColor;
+	font-family: $additionalFont;
+	@include adaptiveFontSize(18, 16);
+}
+
+// Child elements
+a,
+i,
+b,
+em,
+strong,
+mark,
+q {
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+}

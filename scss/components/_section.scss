@@ -1,0 +1,25 @@
+.section {
+    margin-top: 70px;
+}
+
+.section-inner {
+    &__heading {
+        width: 100%;
+
+        text-align: center;
+    }
+    &__content {
+        margin-top: 60px;
+    }
+}
+
+.section-heading {
+    &__description {
+        max-width: 420px;
+
+        margin: 20px auto 0;
+
+        font-weight: 400;
+        @include adaptiveFontSize(24, 20);
+    }
+}
