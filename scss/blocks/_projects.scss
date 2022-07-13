@@ -1,0 +1,56 @@
+.projects {
+    position: relative;
+
+    margin-bottom: 120px;
+    padding-top: 80px;
+    &::before,
+    &::after {
+        content: "";
+
+        position: absolute;
+        left: calc((100% - 100px) / 2);
+
+        height: 5px;
+        width: 100px;
+
+        background-color: $primaryColor;
+    }
+    &::before {
+        top: -15px;
+    }
+    &::after {
+        top: 0;
+    }
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.project {
+    flex: 0 0 420px;
+    &__title {
+        color: $primaryColor;
+        text-transform: capitalize;
+        @include adaptiveFontSize(36, 24);
+    }
+    &__description {
+        margin-top: 8px;
+        
+        font-weight: 500;
+        @include adaptiveFontSize(18, 16);
+    }
+    &__image {
+        margin-top: 36px;
+
+        border-bottom-left-radius: 255px;
+        border-bottom-right-radius: 255px;
+        &--circle {
+            margin-top: 0;
+            margin-bottom: 36px;
+
+            border-radius: 255px;
+        }
+    }
+}
